@@ -73,7 +73,7 @@ function cancelAlarm(){
     btnSetAlarm.setAttribute('onclick','setAlarm(this);');
     optionsDisplay.style.display = "none";
 }
-// membuat function time alarm
+// membuat function time sound alarm 
 function initAlarm(){
     window.alert('Waktunya bangun')
     soundAlarm.play();
@@ -82,16 +82,18 @@ function initAlarm(){
     optionsDisplay.style.display = 'none';
 }
 btnStopAlarm.addEventListener('click', StopAlarm, false);
-// membuat action button stop alarm dan mengstop bunyi alarm
+// membuat action button stop alarm dan mengpause bunyi alarm
 function StopAlarm(){
     soundAlarm.pause();
     soundAlarm.currentTime = 0;
     optionsDisplay.style.display = 'none';
 }
 btnSnoozeAlarm.addEventListener('click', SnoozeFunction, false);
-// membuat function snooze atau memeberhintakan bunyi alarm selama 5 detik
+// membuat function snooze atau memberhentikan bunyi alarm selama 5 detik
 function SnoozeFunction (){
     stopAlarm();
     setTimeout(initAlarm, 5000);
 }
+
+
 
